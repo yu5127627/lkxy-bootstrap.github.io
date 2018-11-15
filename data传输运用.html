@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div data-name="周杰伦" data-age="12"></div>
+<button>获取数据</button>
+<button>设置数据</button>
+
+<script src="js/jQuery1.12.4.js"></script>
+<script>
+    $(function () {
+        $('button')[0].onclick=(function () {
+            console.log($('div').data('name'));
+            console.log($('div').data('age'));
+        });
+        $('button')[1].onclick=(function () {
+            $('div').data({'name':'ykn','age':'13'});
+        })
+    });
+</script>
+</body>
+</html>
